@@ -23,7 +23,7 @@ Executives and market analysts are increasingly focused on understanding:
 
 ## 🧹 Data Cleaning Process
 
-Performed in `World Layoffs - Data Cleaning.sql`, including:
+Performed in `world_layoffs_data_cleaning.sql`, including:
 - ✅ Deduplication using `ROW_NUMBER() OVER (...)` with full record partitioning
 - ✅ Standardization: trimmed whitespace, unified country names, normalized industry labels
 - ✅ Date conversion and datatype updates
@@ -36,7 +36,7 @@ Staging tables were used throughout to preserve original data and enable rollbac
 
 ## 🔍 Exploratory Analysis Highlights
 
-Key queries in `World Layoffs - Exploratory Data Analysis.sql` included:
+Key queries in `world_layoffs_exploratory_data_analysis.sql` included:
 
 - **Total layoffs by company, year, and country**
 - **Top 5 companies by layoffs each year**
