@@ -61,8 +61,8 @@ These results would support interactive dashboards or trend reports for decision
 
 | File | Description |
 |------|-------------|
-| `World Layoffs - Data Cleaning.sql` | Cleans raw layoff data, removes duplicates, fixes formatting, prepares staging table |
-| `World Layoffs - Exploratory Data Analysis.sql` | Analyzes layoff patterns by company, country, year, and other segments |
+| `world_layoffs_data_cleaning.sql` | Cleans raw layoff data, removes duplicates, fixes formatting, prepares staging table |
+| `world_layoffs_exploratory_data_analysis.sql` | Analyzes layoff patterns by company, country, year, and other segments |
 
 ---
 
