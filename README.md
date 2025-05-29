@@ -66,20 +66,31 @@ These results would support interactive dashboards or trend reports for decision
 
 ---
 
-## 💡 Sample Query: Top Companies by Yearly Layoffs
+## 💡 Query to Identify Most Impacted Locations Each Year
 
 ```sql
-WITH Company_Year AS (
-  SELECT company, YEAR(`date`) AS year, SUM(total_laid_off) AS total_laid_off
-  FROM layoffs_staging2
-  GROUP BY company, year
+WITH Location_Year (country, location, years, total_laid_off) AS (
+	SELECT country,
+    location,
+    YEAR(date),
+    SUM(total_laid_off)
+	FROM layoffs_staging2
+	GROUP BY country, location, YEAR(date)
+	ORDER BY 3 ASC
 ),
-Company_Year_Rank AS (
-  SELECT *, DENSE_RANK() OVER (PARTITION BY year ORDER BY total_laid_off DESC) AS Ranking
-  FROM Company_Year
+Location_Year_Rank AS (
+	SELECT *, DENSE_RANK() OVER (
+		PARTITION BY years
+		ORDER BY total_laid_off DESC
+	) AS Ranking
+	FROM Location_Year
+	WHERE years IS NOT NULL
+	AND total_laid_off IS NOT NULL
 )
-SELECT * FROM Company_Year_Rank
-WHERE Ranking <= 5;
+SELECT *
+FROM Location_Year_Rank
+WHERE Ranking <= 10
+;
 ```
 
 ---
