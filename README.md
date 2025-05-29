@@ -100,3 +100,8 @@ WHERE Ranking <= 10
 
 ---
 
+## 📬 Contact
+
+Feel free to reach out with any questions or feedback:
+
+📧 mitchellrogers.uk@gmail.com
