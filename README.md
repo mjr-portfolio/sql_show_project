@@ -7,7 +7,7 @@
 
 ## 📌 Project Overview
 
-This SQL project analyzes a global dataset of tech layoffs, focusing on patterns across company size, funding, geography, and time. Using MySQL, the project involved full data cleaning and exploration to surface key trends in layoffs across the industry.
+This SQL project analyses a global dataset of tech layoffs, focusing on patterns across company size, funding, geography, and time. Using MySQL, the project involved full data cleaning and exploration to surface key trends in layoffs across the industry.
 
 ---
 
@@ -62,7 +62,7 @@ These results would support interactive dashboards or trend reports for decision
 | File | Description |
 |------|-------------|
 | `world_layoffs_data_cleaning.sql` | Cleans raw layoff data, removes duplicates, fixes formatting, prepares staging table |
-| `world_layoffs_exploratory_data_analysis.sql` | Analyzes layoff patterns by company, country, year, and other segments |
+| `world_layoffs_exploratory_data_analysis.sql` | Analyses layoff patterns by company, country, year, and other segments |
 
 ---
 
